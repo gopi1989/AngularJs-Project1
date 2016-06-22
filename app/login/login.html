@@ -1,0 +1,111 @@
+<div class="app-main-container content-page login-page">
+  <div class="container login-padding-0px">
+    <div class="container-fluid login-padding-0px">
+      <div class="col-md-7 col-sm-12 col-xs-12 pull-right">
+        <div class="col-md-12 hide1">
+          <h4 class="font_size12">First time here? you may not to register.Start by selecting your school</h4>
+          <h6 class="font_size10">If you not affiliated with one.Choose a guest user</h6>
+        </div>
+        <div class="col-md-12 login-padding-0px">
+          <div class="panel panel-default panel1">
+            <div class="panel-body">
+              <div class="col-md-6 col-sm-12 col-xs-12">
+                <div class="text-center col-sm-12 col-xs-12"><h4 class="font_size13 align-left">Login</h4></div>
+                <div class="text-center col-sm-12 col-xs-12"><h6 class="font_size8 align-left req-val-err">Fill your detail to get in</h6></div>
+
+                <form name="loginForm" class="form col-md-12 center-block" ng-submit="loginAction()" novalidate>
+                  <div>
+                    <div class="form-group" ng-class="{ 'has-error': loginForm.txt_email.$touched && loginForm.txt_email.$invalid }">
+                      <input type="email" name="txt_email" class="form-control font_size10 rounded" placeholder="{{schoolUsernameLbl}}" ng-model="txt_email" required>
+                      <span class="help-inline required-validation-error col-sm-offset-3" ng-messages="loginForm.txt_email.$error" ng-if="loginForm.txt_email.$touched">
+                        <span ng-message="required">Email required</span>
+                        <span ng-message="email">Invalid email</span>
+                      </span>
+                    </div>
+
+                    <div class="form-group" ng-class="{ 'has-error': loginForm.pwd_password.$touched && loginForm.pwd_password.$invalid }">
+                      <input type="password" name="pwd_password" class="form-control font_size10 rounded" placeholder="{{schoolPasscodeLbl}}" ng-model="pwd_password" required>
+                      <span class="help-inline required-validation-error col-sm-offset-3" ng-messages="loginForm.pwd_password.$error" ng-if="loginForm.pwd_password.$touched">
+                        <span ng-message="required">Password required</span>
+                      </span>
+                    </div>
+
+                    <div class="col-sm-12 col-xs-12 font_size8 align-right padding-bottom">Forgot your Password?</div>
+                  </div>
+
+                  <div class="text-center col-sm-12 col-xs-12">
+                    <button type="submit" class="btn btn-primary font_size10_nocolor">Sign In Now</button>
+                  </div>
+                </form>
+
+              </div>
+              <div class="col-md-2 text-center col-sm-12 col-xs-12 hide1">
+                <img class="img-responsive image-margin-auto" src="images/icon4.png">
+              </div>
+              <div class="col-md-2 text-center col-sm-12 col-xs-12 hide2">
+                <img class="img-responsive image-margin-auto" src="images/layer1.png">
+              </div>
+              <div class="col-md-4 col-xs-12">
+                <div class="dropdown text-center col-sm-12 col-xs-12 padding">
+                  <button class="btn btn-default dropdown-toggle col-xs-12 font_size10 margin_size6 rounded" type="button" id="schoolList" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                    School
+                    <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu screen990_width1 school-list-dropdown" aria-labelledby="schoolList">
+                    <li class="font_size10" ng-repeat="school in schoolList"><a ng-click="onSchoolSelected(school)">{{school.description}}</a></li>
+                  </ul>
+                </div>
+                <div class="text-center col-sm-12 col-xs-12 font_size8 hide1 padding-both">Don't have account?</div>
+                <wepa-core-shib-auth class="shib-iframe" ng-if="selectedShibSchool" school="selectedShibSchool" callback="onShibAuth"></wepa-core-shib-auth>
+                <div>
+                  <button type="submit" class="btn btn-primary font_size10_nocolor hide1 padding-both">Register</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 margin_size5 pull-left">
+        <div class="panel panel-default trans">
+          <div class="panel-body login-padding-lr-0px">
+            <div class="col-md-12 col-sm-12 col-xs-12 login-padding-0px">
+              <div class="col-md-4 col-sm-3 col-xs-3">
+                <img class="img-responsive" src="images/icon1.png">
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-9">
+                <h5 class="font_size11">Pay-for-Print Cloud Solution</h5>
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-12 pull-right">
+                <p align="justify"><h6 class="font_size8">Print management solution developed specifically for student printing in higher education and university setting.</h6></p>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login-padding-0px">
+              <div class="col-md-4 col-sm-3 col-xs-3">
+                <img class="img-responsive" src="images/icon2.png">
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-9">
+                <h5 class="font_size11">Print from Anywhere</h5>
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-12 pull-right">
+                <p align="justify"><h6 class="font_size8">BYOD - Bring your own device! Students upload their documents to the wepa print cloud and retrieve their documents from any wepa print station.</h6></p>
+              </div>
+            </div>
+            <div class="col-md-12 col-sm-12 col-xs-12 login-padding-0px">
+              <div class="col-md-4 col-sm-3 col-xs-3">
+                <img class="img-responsive" src="images/icon3.png">
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-9">
+                <h5 class="font_size11">Fixed Cost</h5>
+              </div>
+              <div class="col-md-8 col-sm-9 col-xs-12 pull-right">
+                <p align="justify"><h6 class="font_size8">With wepa's low pay-for-print cost and no additional charges for software reporting paper or toner - you will truly know your student printing cost</h6></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="veil" ng-show="isLoading"></div>
+  <div id="feedLoading" ng-show="isLoading"></div>
+</div>

@@ -1,0 +1,97 @@
+<div class="app-main-container content-page">
+  <div class="container">
+    <div class="col-md-4 col-sm-6 col-xs-12 sm-text-center">
+      <p class="upload_font2">Hi <span class="upload_color1">{{fullName}}</span>,Welcome Back!</p>
+      <h5 class="upload_font1 w_hide">Web Upload</h5>
+    </div>
+    <div class="col-md-3 col-sm-4 col-xs-12 pull-right">
+      <div class="col-md-6 col-sm-6 col-xs-6 text-right sm-float-right ">
+        <h6 class="upload_font3">My Balance</h6>
+        <h5 class="upload_font2 w_c2"><b>{{userBalance}}</b></h5>
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6 w_r4 sm-float-right">
+        <img class="img-responsive" src="images/dash-icon6.png">
+      </div>
+    </div>
+  </div>
+
+  <div class="container bg_container">
+    <div class=" col-md-12">
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div class="col-md-12 col-sm-12 col-xs-12 bg_rect">
+          <div class="col-md-6 col-sm-6 col-xs-6">
+            <span class="upload_font5 upload_screen350font1">{{fileName}}</span>
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 pull-right">
+            <span class="upload_font5 upload_screen350font1">{{(fileSize || 0) | prettyBytes}}</span>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 upload_margin2">
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_font4 upload_screen768font1">
+            Page Orientation
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 upload_margin3">
+            <img class="img-responsive" ng-click="potrait()" ng-class="selectPotrait ?  'unselect':'select'" src="images/doc_icon.png">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 upload_margin3">
+            <img class="img-responsive" ng-click="landscape();" ng-class="!selectPotrait ?  'unselect':'select'" src="images/doc_icon1.png">
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_font4 upload_screen768font1 upload_margin2">
+            Color
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 upload_margin3">
+            <img class="img-responsive"  ng-click="printcolor()" ng-class="print ?  'unselect':'select'" src="images/u_icon3.png">
+          </div>
+          <div class="col-md-6 col-sm-6 col-xs-6 upload_margin3">
+            <img class="img-responsive" ng-click="printbw()" ng-class="!print ?  'unselect':'select'" src="images/u_icon4.png">
+          </div>
+        </div>
+
+        <div class="col-md-6 col-sm-6 col-xs-12 upload_margin2">
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_font4 upload_screen768font1">
+            Copies
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_font5 upload_screen768font1 upload_margin5">
+            <input class="copy" type="text" name="txt_copies" ng-model="copies">
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_margin2">
+            <div class="col-md-12 col-sm-12 col-xs-5 upload_font4 upload_screen768font1 upload_margin1">Range
+              <div class="checkbox"><input type="checkbox" ng-model="checkboxModelvalue" ng-true-value="'all'" ng-false-value="''"><span class="upload_font4 upload_screen768font1">All</span></div>
+            </div>
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_screen768font1 upload_font5" ng-hide="checkboxModelvalue">
+            <input class="copy" type="text" name="txt_printRangeStart" ng-model="printRangeStart">
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_screen768font1 upload_font5 align_to text-center" ng-hide="checkboxModelvalue">
+            to
+          </div>
+          <div class="col-md-12 col-sm-12 col-xs-12 upload_screen768font1 upload_font5" ng-hide="checkboxModelvalue">
+            <input class="copy" type="text" name="txt_printRangeEnd" ng-model="printRangeEnd">
+          </div>
+        </div>
+
+        <div class="col-md-12 col-sm-12 col-xs-12 upload_font4 upload_color1 upload_margin2 text-center">
+        </div>
+      </div>
+
+      <div class="col-md-6 col-sm-12 col-xs-12">
+        <div ngf-drop="upload($files)" class="drop-box" ngf-drag-over-class="'dragover'" ngf-multiple="true" ngf-pattern="'image/*,application/pdf'">
+          <div class="col-md-12 col-sm-6 w_hide">
+            <img  src="images/cloud.png">
+          </div>
+          <span class="upload_font6 col-sm-12 col-xs-12 upload_size">Drag & Drop Files</span></br>
+          <span class="upload_font3 col-sm-12 col-xs-12 w_hide1">Choose a file that does not exceed 20MB file size to be uploaded</span>
+          <div class="button" align="center" ngf-select="upload($files)" ngf-multiple="true">
+            <img class=" img-responsive"  src="images/upload_button.png">
+          </div>
+        </div>
+        <div class="col-md-12 col-sm-12 col-xs-12 w_hide">
+          <img class="img-responsive w_hide" src="images/arrow.png">
+        </div>
+        <p align ="center" class="col-sm-12 col-xs-12 upload_font3 w_hide">Only .doc,.docx,.xls,.xlsx,.ppt,.pptx & .rtf files will be accepted you can also upload images in the following extensions .png,.jpg,.jpeg,.bmp,.tiff,.tif,.gif</p>
+      </div>
+    </div>
+  </div>
+</div>

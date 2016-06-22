@@ -1,0 +1,181 @@
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(fonts/Montserrat-Regular.ttf);
+}
+.upload_margin1 {
+  margin-top: 15%;
+}
+.upload_margin2 {
+  margin-top: 6%;
+}
+.upload_margin3 {
+  margin-top: 10%;
+}
+.upload_margin4 {
+  margin-top: 12%;
+}
+.upload_margin5 {
+  margin-top: 17%;
+}
+.upload_font1 {
+  font-family: Montserrat-Regular;
+  font-size: 10pt;
+  color: #848484;
+}
+.upload_font2 {
+  font-family: Montserrat-Regular;
+  font-size: 14pt;
+  color: #848484;
+}
+.upload_font3 {
+  font-family: Montserrat-Regular;
+  font-size: 8pt;
+  color: #848484;
+}
+.upload_font4 {
+  font-family: Montserrat-Regular;
+  font-size: 9pt;
+  color: black;
+}
+.upload_font5 {
+  font-family: Montserrat-Regular;
+  font-size: 10pt;
+  color: #848484;
+}
+.upload_font6 {
+  font-family: Montserrat-Regular;
+  font-size: 15pt;
+  color: #005ea3;
+}
+.upload_color1 {
+  color: #005ea3;
+}
+#footer {
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+}
+body {
+  overflow-x: hidden;
+}
+.bg_container {
+  background-color: #FFFFFF;
+}
+.bg_rectangle {
+  border: solid 1px gray;
+}
+.bg_rect {
+  background-color: #F5F5F5;
+}
+/*Drag and Drop CSS Styles*/
+
+.drop-box {
+  background: #FFFFFF;
+  border: 1px dashed #DDD;
+  width: 95%;
+  text-align: center;
+  padding: 5%;
+  margin: 10px;
+}
+.dragover {
+  border: 5px dashed blue;
+}
+.copy {
+  width: 89%;
+}
+.align_to {
+  margin-left: -5%;
+}
+/*To Support Minimum sized Desktop*/
+
+@media screen and (max-width: 995px) {
+  #footer {
+    background-color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 94px;
+    margin-top: 85px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  .w_hide {
+    display: none;
+  }
+  .drop-box {
+    background: #FFFFFF;
+    /* border: 1px dashed #DDD; */
+
+    width: 95%;
+    text-align: center;
+    padding: 5%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .w_popdown {
+    position: absolute;
+    right: 2.2%;
+    background-color: white;
+  }
+  .sm-float-left {
+    float: left;
+  }
+  .sm-float-right {
+    float: right;
+  }
+  .w_hide {
+    display: none;
+  }
+  .w_header {
+    margin-top: 2%;
+    margin-left: 2%;
+  }
+  .sm-text-center {
+    text-align: center;
+  }
+  .upload_screen768font1 {
+    font-family: Montserrat-Regular;
+    font-size: 8pt;
+    color: black;
+  }
+  .drop-box {
+    background: #FFFFFF;
+    border: 1px dashed #DDD;
+    width: 95%;
+    text-align: center;
+    padding: 5%;
+    margin: 10px;
+  }
+}
+@media screen and (max-width: 470px) {
+  .upload_font1 {
+    font-family: Montserrat-Regular;
+    font-size: 10pt;
+    color: #848484;
+  }
+}
+@media screen and (max-width: 350px) {
+  .upload_screen350font1 {
+    font-family: Montserrat-Regular;
+    font-size: 6.5pt;
+    color: #848484;
+  ;
+  }
+  .upload_size {
+    font-size: 10pt;
+  }
+  .w_hide1 {
+    display: none;
+  }
+}
+.select {
+  background-color: white;
+}
+.unselect {
+  border: 2px solid gray;
+  border-radius: 17px;
+  background-color: #005EA3;
+}

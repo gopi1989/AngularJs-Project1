@@ -1,0 +1,19 @@
+{
+  "kioskStationIDKey": "TESTSTATIONKEY_001",
+  "scId": "17",
+  "scType": "INTERNAL",
+  "scDescription": "A Guest User",
+  "scLocationCode": "GMAIL",
+  "scIsVisible": "True",
+  "scUsernameText": "Username",
+  "scPasswordText": "Password",
+  "scShibbolethURL": "",
+  "scEmailExtension": "@gmail.com",
+  "cstUserType": "Student",
+  "cstTimeout": "5",
+  "cstPrintTimeOut": "60",
+  "cstInstallLogPath": "C:\\Users\\RAJKUM~1\\AppData\\Local\\Temp\\MSI10895.LOG",
+  "cstLogoutPrompt": "0",
+  "cstGuestAccess": "0",
+  "cstIsLabAD": "0"
+}

@@ -1,0 +1,62 @@
+<div ng-style="{'background-image': 'url('+ backgroundImage +')'}" class="app-main-container">
+    <div wepa-header></div>
+    <div class="container padding-0px-all">
+        <div class="col-md-4 col-sm-6 col-xs-12 dash-a2 padding-0px-all">
+            <p class="dash-font14">Hi <span class="dash-color1">{{fullName}}</span>,Welcome Back!</p>
+            <h5 class="dash-font10 dash-hide">My Account</h5>
+        </div>
+        <div class="col-md-3 col-sm-4 col-xs-12 pull-right padding-0px-all">
+            <div class="col-md-6 col-sm-6 col-xs-6 text-right dash-sm-float-right">
+                <h6 class="dash-font8">My Balance</h6>
+                <h5 class="dash-font14 dash-color2"><b>{{userBalance}}</b></h5>
+            </div>
+            <div class="col-md-6 col-sm-6 col-xs-6 dash-r4 dash-sm-float-left">
+                <img class="img-responsive" src="images/dash-icon6.png">
+            </div>
+        </div>
+        <!--<div>
+            <button type="button" ng-click="Releasecodelist()" class="btn btn-primary font_size10_remote col-md-4 col-sm-2 col-xs-1">Remote Release</button>
+        </div>-->
+    </div>
+    <div class="container">
+        <div class="row dashboard_scroll">
+            <table datatable="ng" dt-options="dtOptionsdata" dt-column-defs="dtColumnDefs" class="row-border hover" width="100%">
+                <thead>
+                <tr>
+                    <th>TransactionID</th>
+                    <th>Name</th>
+                    <th>ReleaseCode</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="files in file">
+                    <td>{{files.transactionId}}</td>
+                    <td>{{files.filename}}</td>
+                    <td>{{files.releaseCode}}</td>
+                    <td>{{files.remotePrintStatus}}
+                        <div class = "progress progress-striped active" ng-show="!showbar">
+                            <div class = "progress-bar progress-bar-primary" role = "progressbar"
+                                 aria-valuenow = "60" aria-valuemin = "0" aria-valuemax = "100" style = "width: 100%;">
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <a href=""><img class="" ng-click = "cancelprint(files.transactionId)" ng-show="!cancel" src="images/dash-delete_icon.png"></a>
+                        <!--<ul class="table-option">
+                            <a href="#/dashboard"><img  src="images/dash-action-_icon.png"></a>
+                            <a href="#/dashboard"><img class="" src="images/dash-icon9.png"></a>
+                            <a href="#/dashboard"><img class="" src="images/dash-delete_icon.png"></a>
+                        </ul>-->
+                        <!--<input type="checkbox" class="checkbox_size" checklist-model="list.roles" checklist-value="printfile.releaseCode" >-->
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div style="padding: 15px;"><button type="button" ng-click="goDashboard()" class="btn btn-primary font_size10_nocolor col-md-2 col-sm-2 col-xs-1">Back to dashboard</button></div>
+    </div>
+    <!-- footer content loads here-->
+    <div wepa-footer></div>
+</div>

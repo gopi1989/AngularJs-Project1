@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-static-top l1" style="margin-bottom: 0px; width: 100%; position: fixed;">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span><img src="images/dash-icon1.png"></span>
+      </button>
+      <img class="img-responsive dash-margin1 dash-r1" src="images/logo.png">
+    </div>
+    <div id="navbar" class="navbar-collapse collapse popdown" aria-expanded="false" style="height: 1px;">
+      <ul class="nav navbar-nav navbar-left dash-margin2" ng-if="isAuthenticated()">
+        <li ><a href=""><img class="dash-hide" src="images/dash-icon1.png"></a></li>
+        <li class="dash-font10 dash-r3"><a href="#/upload"><img src="images/dash-icon2.png">Wepa upload</a></li>
+        <li class="dash-font10 dash-r3"><a href=""><img src="images/dash-icon3.png">Download Print App</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" ng-if="isAuthenticated()">
+        <li class="dash-font10"><a href="#/dashboard"><img src="images/dash-icon4.png">Members Area</a></li>
+        <li class="dash-font10"><a href="" ng-click="signOut()"><img src="images/dash-icon5.png">Logout</a></li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right" ng-if="!isAuthenticated()">
+        <li class="font_size10"><a href="">How it works</a></li>
+        <li class="font_size10"><a href="">Bring <img src="images/logo1.png"> to your campus</a></li>
+        <li class="font_size10"><a href="">Why <img src="images/logo1.png">?</a></li>
+        <li class="font_size10"><a href="">Support</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>

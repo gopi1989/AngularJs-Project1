@@ -1,0 +1,54 @@
+{
+  "name": "wepa-members-website",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "del": "^2.2.0",
+    "event-stream": "^3.3.2",
+    "gulp": "^3.9.1",
+    "gulp-angular-templatecache": "^1.8.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-connect": "^4.0.0",
+    "gulp-csso": "^2.0.0",
+    "gulp-if": "^2.0.1",
+    "gulp-ng-annotate": "^2.0.0",
+    "gulp-order": "^1.1.1",
+    "gulp-sass": "^2.3.1",
+    "gulp-standard": "^7.0.1",
+    "gulp-uglify": "^1.5.3",
+    "gulp-useref": "deltaidea/gulp-useref#feature/fix-additional-streams",
+    "gulp-wiredep": "0.0.0",
+    "jasmine-core": "2.4.0",
+    "karma": "^0.13.22",
+    "karma-coverage": "^0.5.5",
+    "karma-chrome-launcher": "~0.1.2",
+    "karma-html-reporter": "^0.2.7",
+    "karma-jasmine": "~0.2.2",
+    "karma-phantomjs-launcher": "^1.0.0",
+    "karma-teamcity-reporter": "^1.0.0",
+    "lazypipe": "^1.0.1",
+    "open": "0.0.5",
+    "phantomjs-prebuilt": "^2.1.7"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "scripts": {
+    "build": "npm install && gulp build-dist",
+    "start": "npm install && gulp watch",
+    "test": "npm install && gulp check-style test-once"
+  },
+  "standard": {
+    "globals": [
+      "angular",
+      "$",
+      "describe",
+      "beforeEach",
+      "spyOn",
+      "it",
+      "expect",
+      "inject",
+      "session"
+    ]
+  }
+}

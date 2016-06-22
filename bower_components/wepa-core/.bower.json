@@ -1,0 +1,30 @@
+{
+  "name": "wepa-core",
+  "main": [
+    "dist/wepa.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "doc",
+    "src",
+    "test",
+    "gulpfile.js",
+    "karma.conf.js"
+  ],
+  "dependencies": {
+    "angular": "1.5.5"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.5.5"
+  },
+  "version": "0.5.0",
+  "_release": "0.5.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "0.5.0",
+    "commit": "6409064c0b29c1b0acf4d2e5a2cb8d8f0aa94c31"
+  },
+  "_source": "https://vijayragavan@bitbucket.org/wepanow/angular-core.git",
+  "_target": "*",
+  "_originalSource": "https://vijayragavan@bitbucket.org/wepanow/angular-core.git"
+}

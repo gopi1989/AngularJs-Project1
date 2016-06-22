@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cloud Campus Printing Solution - wepa</title>
+    <meta name="description" content="wepa is a cloud based, print management solution for student printing in higher
+    education and university settings. The pay-for-print model is ideal for student and guest printing and integration
+    with student directory ensures convenience for students.">
+    <meta name="viewport" content="width=device-width">
+
+    <!-- Enable shib auth via an iframe. See ANG-30. -->
+    <script>document.domain = 'wepanow.com'</script>
+
+    <!-- build:css styles/styles.css -->
+    <!-- bower:css --><!-- endbower -->
+    <link rel="stylesheet" href="styles/common.scss">
+    <link rel="stylesheet" href="styles/custom.scss">
+    <link rel="stylesheet" href="styles/dashboard.scss">
+    <link rel="stylesheet" href="styles/login.scss">
+    <link rel="stylesheet" href="styles/upload.scss">
+    <!-- endbuild -->
+  </head>
+
+  <body class="body-background" ng-app="wepaUI">
+
+    <!--[if lte IE 8]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <!-- Body content loads here -->
+    <div wepa-header></div>
+    <div ng-view></div>
+    <div wepa-footer></div>
+
+    <!-- build:js scripts/scripts.js -->
+    <!-- bower:js --><!-- endbower -->
+
+    <script src="app.js"></script>
+    <script src="constant/errorMessages.js"></script>
+    <script src="constant/msgConstants.js"></script>
+    <script src="common/popupMessage.js"></script>
+    <script src="login/login.js"></script>
+    <script src="dashboard/dashboard.js"></script>
+	<script src="release/release.js"></script>
+    <script src="header/wepaHeader.js"></script>
+    <script src="footer/wepaFooter.js"></script>
+    <script src="services/session.js"></script>
+    <script src="upload/upload.js"></script>
+    <!-- endbuild -->
+  </body>
+</html>

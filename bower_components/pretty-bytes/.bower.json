@@ -1,0 +1,44 @@
+{
+  "name": "pretty-bytes",
+  "description": "Convert bytes to a human readable string: 1337 → 1.34 kB",
+  "license": "MIT",
+  "main": "pretty-bytes.js",
+  "authors": [
+    {
+      "name": "Sindre Sorhus",
+      "email": "sindresorhus@gmail.com",
+      "url": "http://sindresorhus.com"
+    }
+  ],
+  "keywords": [
+    "pretty",
+    "bytes",
+    "byte",
+    "filesize",
+    "size",
+    "file",
+    "human",
+    "humanized",
+    "readable",
+    "si",
+    "data"
+  ],
+  "ignore": [
+    ".*",
+    "test.js",
+    "cli.js",
+    "component.json",
+    "package.json"
+  ],
+  "homepage": "https://github.com/sindresorhus/pretty-bytes",
+  "version": "1.0.4",
+  "_release": "1.0.4",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.4",
+    "commit": "8eadd73bb3ecd1fea97ba72bbd50a2bf1bac58fe"
+  },
+  "_source": "https://github.com/sindresorhus/pretty-bytes.git",
+  "_target": "~1.0.1",
+  "_originalSource": "pretty-bytes"
+}

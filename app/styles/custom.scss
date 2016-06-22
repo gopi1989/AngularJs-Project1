@@ -1,0 +1,210 @@
+$icon-font-path: "fonts/bootstrap/";
+
+// bower:scss
+// endbower
+
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(fonts/Montserrat-Regular.ttf);
+}
+.app-main-container {
+  background-size: 100% 100%;
+  top: 0px;
+  bottom: 0px;
+  width: 100%;
+  position: inherit;
+}
+.font_size10 {
+  font-family: Montserrat-Regular;
+  font-size: 10pt;
+  color: #848484;
+}
+.font_size12 {
+  font-family: Montserrat-Regular;
+  font-size: 12pt;
+  color: #005ea3;
+}
+.font_size11 {
+  font-family: Montserrat-Regular;
+  font-size: 11pt;
+  color: black;
+}
+.font_size8 {
+  font-family: Montserrat-Regular;
+  font-size: 8pt;
+  color: #848484
+}
+.font_size13 {
+  font-family: Montserrat-Regular;
+  font-size: 13pt;
+  color: black;
+}
+.font_size10_nocolor {
+  font-family: Montserrat-Regular;
+  font-size: 10pt;
+  color: white;
+}
+body {
+  overflow-x: hidden;
+  height: auto;
+}
+#footer {
+  height: 60px;
+  background-color: #f2f2f2;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  opacity: 0.5;
+}
+.margin_size1 {
+  margin-top: 1%;
+}
+.margin_size5 {
+  margin-top: 5%;
+}
+.margin_size10 {
+  //margin-top: 10%;
+}
+.margin_left50 {
+  margin-left: 50%;
+}
+.margin_width23 {
+  width: 23%;
+}
+.margin_width77 {
+  width: 77%;
+}
+.margin_size6 {
+  margin-top: 6%;
+}
+.rounded {
+  border: 1px solid #ccc;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-shadow: 2px 2px 3px #666;
+  -webkit-box-shadow: 2px 2px 3px #666;
+  box-shadow: 2px 2px 3px #666;
+  padding: 4px 30px;
+  outline: 0;
+  -webkit-appearance: none;
+  box-shadow: none;
+}
+.hide2 {
+  display: none;
+}
+.hide1 {
+  display: block;
+}
+.trans {
+  background-color: transparent;
+  border: none;
+}
+.padding-both {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.padding-bottom {
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .popdown {
+    position: absolute;
+    right: 2.2%;
+    background-color: white;
+  }
+}
+@media screen and (max-width: 990px) {
+  .panel1 {
+    background-color: transparent;
+    border: none;
+  }
+  .trans {
+    background-color: #FAFAFA;
+    border: 1px solid gray;
+    opacity: 0.9;
+  }
+  .hide1 {
+    display: none;
+  }
+  .hide2 {
+    display: block;
+  }
+  .bg1 {
+    background: url('../images/layer1.png');
+  }
+  .m4 {
+    margin-left: 75%;
+  }
+  .screen990_width1 {
+    width: 45%;
+    margin-left: 24%;
+  }
+  .screen990_width2 {
+    margin-left: 36%;
+  }
+  .screen_width3 {
+    margin-left: 42%;
+  }
+  .screen990_width4 {
+    margin-left: 38%;
+    margin-bottom: -2%;
+  }
+  .image-margin-auto {
+    margin: auto;
+  }
+}
+@media screen and (min-width: 990px) {
+  .align-left {
+    text-align: left;
+  }
+  .align-right {
+    text-align: right;
+  }
+  .padding {
+    padding: 0px;
+  }
+}
+.required-validation-error {
+  margin-top: -25px;
+  margin-right: 10px;
+  font-size: 12px;
+  float: right;
+  color: #e13b3b;
+}
+.irmsg-align {
+  float: left;
+  margin-right: 11px;
+}
+.login-issue {
+  border-color: red;
+}
+.login-issue:focus {
+  border-color: red;
+}
+.login-padding-0px {
+  padding: 0px;
+}
+.login-padding-lr-0px {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+#veil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: not-allowed;
+  filter: alpha(opacity=60);
+  opacity: 0.6;
+  background: #ffffff url(../images/loader9.gif) no-repeat 50% 35%;
+}
+#feedLoading {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  text-align: center;
+  font-size: 4em;
+  color: white;
+  text-shadow: 2px 2px 2px #021124;
+}
